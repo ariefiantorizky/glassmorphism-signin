@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* input,
+* button {
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+* input {
+    cursor: text;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: max-content;
+    position: relative;
+}
+
+.card {
+    width: 350px;
+    height: 450px;
+    padding: 15px;
+    background-color: rgba(17, 25, 40, 0.3);
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.125);
+}
+
+.card h1 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-size: 23px;
+    margin: 33px auto;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin: 12px auto;
+    position: relative;
+}
+
+.form-input label {
+    margin: 8px 0;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+.form-input input {
+    border: 1px solid #fff;
+    padding: 12px;
+    color: #fff;
+    border-radius: 3px;
+    position: relative;
+}
+
+.form-input button {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3px);
+    padding: 8px;
+    margin-top: 30px;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+}
+
+.form-input button:hover {
+    background: #fff;
+}
+
+.form-input .check-pass {
+    position: absolute;
+    right: 3%;
+    top: 65%;
+    bottom: 30%;
+    cursor: pointer;
+}
+
+.form-input .check-pass i {
+    font-size: 16px;
+    color: #fffffff1;
+    border-radius: 5px;
+}
+
+.form-input .check {
+    position: absolute;
+    right: 2%;
+    top: 60%;
+    bottom: 40%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.media-login {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.media-login div {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3px);
+    text-align: center;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.media-login div:nth-child(3) {
+    background: #fff;
+}
+
+.media-login i {
+    color: #1A202C;
+    font-size: 16px;
+}
+
+.media-login div:hover i {
+    color: #fff;
+}
+
+.media-login div:first-child:hover {
+    background: #EB4132;
+}
+
+.media-login div:nth-child(2):hover {
+    background: #1977F3;
+}
+
+.media-login div:nth-child(3):hover i {
+    color: #1A202C;
+}

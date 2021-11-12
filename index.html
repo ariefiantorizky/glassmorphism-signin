@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>SIGN IN</h1>
+
+            <form aria-required="true" autocomplete="off">
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" name="user" id="username" required>
+                    <!-- <div class="check"></div> -->
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" name="pass" id="password" required>
+                    <!-- <div class="check"></div> -->
+                    <div class="check-pass"><i class="fas fa-eye-slash" id="show-pass"></i></div>
+                </div>
+                <div class="form-input">
+                    <button type="submit">SIGN IN</button>
+                </div>
+            </form>
+
+            <div class="media-login">
+                <div title="Google">
+                    <a href="#"><i class="fab fa-google"></i></a>
+                </div>
+                <div title="Facebook">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div title="Create Account">
+                    <a href="#"><i class="fas fa-user-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const show = document.getElementById("show-pass");
+        const pass = document.getElementById("password");
+        let type = "password";
+
+        show.addEventListener("click", function () {
+            if (type == "password") {
+
+                pass.setAttribute("type", "text");
+                show.classList.replace("fa-eye-slash", "fa-eye");
+                type = "text";
+
+            } else if (type == "text") {
+
+                pass.setAttribute("type", "password");
+                show.classList.replace("fa-eye", "fa-eye-slash");
+                type = "password";
+            }
+        })
+    </script>
+</body>
+
+</html>
